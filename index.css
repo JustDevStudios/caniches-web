@@ -1,0 +1,170 @@
+/* Reset básico y variables de color personalizadas */
+:root {
+    --color-principal: #A67C52;
+    /* Marrón claro cálido (como el pelaje de un caniche) */
+    --color-fondo: #FFF8F3;
+    /* Crema suave */
+    --color-blanco: #FFFFFF;
+    --color-acento: #FF8C94;
+    /* Rosa melocotón elegante y tierno */
+    --color-texto: #4B3B2A;
+    /* Marrón oscuro para texto */
+}
+
+/* Estilos globales del HTML y body */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* Cabecera principal del sitio */
+.superior {
+    width: 100%;
+    background-color: var(--color-principal);
+    color: white;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilo del título dentro de la cabecera */
+.superior h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Contenedor de los enlaces de navegación */
+.nav-links {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Estilos visuales de cada enlace */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0;
+    transition: background-color 0.2s, text-decoration 0.2s;
+}
+
+/* Efecto visual al pasar el mouse por encima de los enlaces */
+.nav-links a:hover {
+    background-color: var(--color-acento);
+    border-radius: 4px;
+    text-decoration: underline;
+}
+
+.desc {
+    margin: 15px;
+}
+
+.desc-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+/* Modificación para que los botones ocupen todo el espacio y estén distribuidos */
+.quick-contact {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    /* Mejor distribuir el espacio entre botones */
+    max-width: 480px;
+    /* Ancho máximo para que no se estire demasiado */
+    margin: 0 auto 40px auto;
+    padding: 10px;
+}
+
+.btn-contact {
+    flex: 1;
+    /* Que cada botón ocupe igual ancho */
+    text-align: center;
+    background-color: var(--color-principal);
+    color: white;
+    padding: 14px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.btn-contact:hover {
+    background-color: var(--color-acento);
+}
+
+/* Eliminado todo lo relacionado al formulario ya que no se usa */
+/* 
+form {
+    ...
+}
+form label {
+    ...
+}
+form input[type="email"],
+form textarea {
+    ...
+}
+form button[type="submit"] {
+    ...
+}
+form button[type="submit"]:hover {
+    ...
+}
+*/
+
+/* Responsive */
+@media (max-width: 600px) {
+    .superior {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0.5rem;
+        gap: 0.2rem;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .quick-contact {
+        flex-direction: column;
+        max-width: 90%;
+        margin: 20px auto;
+        gap: 12px;
+        padding: 0;
+    }
+
+    .btn-contact {
+        flex: unset;
+        /* Ancho automático en columna */
+        width: 100%;
+        padding: 12px 0;
+        font-size: 1rem;
+        border-radius: 6px;
+    }
+}

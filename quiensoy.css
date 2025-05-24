@@ -1,0 +1,79 @@
+/* Variables de color personalizadas - las mismas del header */
+:root {
+    --color-principal: #A67C52;
+    /* Marrón claro cálido */
+    --color-fondo: #FFF8F3;
+    /* Crema suave */
+    --color-blanco: #FFFFFF;
+    --color-acento: #FF8C94;
+    /* Rosa melocotón */
+    --color-texto: #4B3B2A;
+    /* Marrón oscuro para texto */
+}
+
+/* Reset básico y estilos globales */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* Contenido principal */
+main.content {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    background-color: var(--color-blanco);
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(166, 124, 82, 0.3);
+}
+
+/* Título principal dentro del main */
+main.content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 3px solid var(--color-principal);
+    padding-bottom: 0.5rem;
+    color: var(--color-principal);
+}
+
+/* Párrafos */
+main.content p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+
+/* Links dentro del contenido */
+main.content a {
+    color: var(--color-principal);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+main.content a:hover {
+    color: var(--color-acento);
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    main.content {
+        margin: 1.5rem 1rem;
+        padding: 1.5rem 1.5rem;
+    }
+
+    main.content h2 {
+        font-size: 1.5rem;
+    }
+
+    main.content p {
+        font-size: 1rem;
+    }
+}
